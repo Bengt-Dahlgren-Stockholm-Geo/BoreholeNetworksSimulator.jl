@@ -8,7 +8,9 @@ function topology_coeffs!(M, network::BoreholeNetwork, mass_flows)
         if bh_in == sink(network)
             continue
         end
-        parents = inneighbors(network.graph, bh_in)
+        # parents = inneighbors(network.graph, bh_in)
+        parents = filter(i -> i ≠ source(network), inneighbors(network.graph, bh_in))
+        
         filter!(i -> i ≠ source(network), parents)
 
         for bh_out in parents
