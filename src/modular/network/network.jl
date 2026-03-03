@@ -171,7 +171,9 @@ end
 Return a `Valve` that splits the flow such that each borehole `nodes[i]` receives an absolute amount 
 of mass flow equal to `mass_flows[i]`.
 """
-function absolute_valve(nodes::Vector{Int}, mass_flows::Vector{T}) where {T <: Number}
+# function absolute_valve(nodes::Vector{Int}, mass_flows::Vector{T}) where {T <: Number}
+function absolute_valve(nodes::AbstractVector{Int}, mass_flows::AbstractVector{T}) where {T <: Number}
+    
     valve = Valve(Dict{Int, T}())
     total_mass_flow = sum(mass_flows)
     for (i, n) in enumerate(nodes)
