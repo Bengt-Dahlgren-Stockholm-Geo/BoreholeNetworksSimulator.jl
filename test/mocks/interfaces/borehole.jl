@@ -12,7 +12,7 @@ Mock for testing purposes.
     Co = 0.
     Cb = 0.
 end
-BoreholeNetworksSimulator.get_H(bh::BoreholeMock) = bh.H
-BoreholeNetworksSimulator.get_D(bh::BoreholeMock) = bh.D
-BoreholeNetworksSimulator.get_rb(bh::BoreholeMock) = bh.rb
-BoreholeNetworksSimulator.uniform_Tb_coeffs(bh::BoreholeMock, λ, mass_flow, Tref, fluid) = bh.Ci, bh.Co, bh.Cb
+BoreholeNetworksSimulatorFork.get_H(bh::BoreholeMock) = bh.H
+BoreholeNetworksSimulatorFork.get_D(bh::BoreholeMock) = bh.D
+BoreholeNetworksSimulatorFork.get_rb(bh::BoreholeMock) = bh.rb
+BoreholeNetworksSimulatorFork.uniform_Tb_coeffs(bh::BoreholeMock, λ, mass_flow, Tref, fluid) = bh.Ci, bh.Co, bh.Cb

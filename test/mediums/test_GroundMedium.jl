@@ -1,4 +1,4 @@
-import BoreholeNetworksSimulator: GroundMedium, get_λ, get_α, get_T0, compute_response!
+import BoreholeNetworksSimulatorFork: GroundMedium, get_λ, get_α, get_T0, compute_response!
 
 @testset "test_GroundMedium" begin
     λ = rand()

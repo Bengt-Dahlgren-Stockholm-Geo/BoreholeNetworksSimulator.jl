@@ -1,5 +1,5 @@
 project_dir = dirname(pwd())
-examples_dir = "$project_dir/BoreholeNetworksSimulator.jl/examples"
+examples_dir = "$project_dir/BoreholeNetworksSimulatorFork.jl/examples"
 
 @info "Running Braedstrup"
 include("$examples_dir/Braedstrup/main.jl")

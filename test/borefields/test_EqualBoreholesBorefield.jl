@@ -1,4 +1,4 @@
-import BoreholeNetworksSimulator: n_boreholes, get_H, get_rb, segment_coordinates, internal_model_coeffs!, internal_model_b!
+import BoreholeNetworksSimulatorFork: n_boreholes, get_H, get_rb, segment_coordinates, internal_model_coeffs!, internal_model_b!
 
 @testset "test_EqualBoreholesBorefield" begin
     H = 100.

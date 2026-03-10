@@ -1,4 +1,4 @@
-import BoreholeNetworksSimulator: method_coeffs!, method_b!, precompute_auxiliaries!, update_auxiliaries!
+import BoreholeNetworksSimulatorFork: method_coeffs!, method_b!, precompute_auxiliaries!, update_auxiliaries!
 
 @testset "test_ConvolutionMethod_auxiliaries" begin
     method = ConvolutionMethod()

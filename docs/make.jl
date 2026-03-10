@@ -24,5 +24,5 @@ makedocs(
     sitename = "BoreholeNetworksSimulatorFork.jl"
 )
 deploydocs(
-    repo = "github.com/marcbasquensmunoz/BoreholeNetworksSimulator.jl.git"
+    repo = "github.com/marcbasquensmunoz/BoreholeNetworksSimulatorFork.jl.git"
 )

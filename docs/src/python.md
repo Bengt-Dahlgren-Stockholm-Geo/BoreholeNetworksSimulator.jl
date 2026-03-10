@@ -1,9 +1,9 @@
-# Running BoreholeNetworksSimulator from Python
+# Running BoreholeNetworksSimulatorFork from Python
 
-It is also possible to run BoreholeNetworksSimulator from Python by using its Julia interoperability (achieved with the package `PythonCall.jl` and the module `juliacall`) while keeping roughly the same syntax. For a more detailed explanation of how this works, please visit the [PythonCall.jl documentation](https://juliapy.github.io/PythonCall.jl/stable/).
+It is also possible to run BoreholeNetworksSimulatorFork from Python by using its Julia interoperability (achieved with the package `PythonCall.jl` and the module `juliacall`) while keeping roughly the same syntax. For a more detailed explanation of how this works, please visit the [PythonCall.jl documentation](https://juliapy.github.io/PythonCall.jl/stable/).
 This requires to have installed in your python environment the modules `juliacall` and `numpy`.
 
-BoreholeNetworksSimulator.jl contains a second Julia module called `BNSPythonAdapter` whose purpose is to make the necessary conversions between Python and Julia. This module is not intended to be used from Julia, but from within Python.
+BoreholeNetworksSimulatorFork.jl contains a second Julia module called `BNSPythonAdapter` whose purpose is to make the necessary conversions between Python and Julia. This module is not intended to be used from Julia, but from within Python.
 In this tutorial, we will repeat the example in [Basic tutorial](@ref) but run from Python to show how it works. The full example as a Python script in at `BNSPythonAdapter/example.py`.
 
 BNSPythonAdapter contains a python script `src/adapter.py` that executes the necessary bridging code.
@@ -11,13 +11,13 @@ You should start your python program by importing this module. Assuming that the
 ````
 import src.adapter
 ````
-The script takes care of activating the Julia package `BNSPythonAdapter` which has `BoreholeNetworksSimulator` as a dependency, and loads both namespaces for later use.
+The script takes care of activating the Julia package `BNSPythonAdapter` which has `BoreholeNetworksSimulatorFork` as a dependency, and loads both namespaces for later use.
 It also defines conversions from Python objects to their Julia counterparts. 
-Next, we need to import `juliacall` to be able to reference objects and funcions from `BoreholeNetworksSimulator`. It is useful to give it an alias for conciseness.
+Next, we need to import `juliacall` to be able to reference objects and funcions from `BoreholeNetworksSimulatorFork`. It is useful to give it an alias for conciseness.
 ````
 from juliacall import Main as jl
 ````
-Now, the python variable `jl` represents the `Main` module in Julia, and it has as methods all the Julia functions available in it. Since we imported the namespace `BoreholeNetworksSimulator`, this also includes its objects and functions.
+Now, the python variable `jl` represents the `Main` module in Julia, and it has as methods all the Julia functions available in it. Since we imported the namespace `BoreholeNetworksSimulatorFork`, this also includes its objects and functions.
 
 Then, we define the same variables as in [Basic tutorial](@ref):
 ````

@@ -36,7 +36,7 @@ function compute_constant_total_heat(Nt, Δt, positions)
 
 
     ########################################################
-    # BoreholeNetworksSimulator version
+    # BoreholeNetworksSimulatorFork version
     ########################################################
 
     T0 = 10.

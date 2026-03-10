@@ -8,7 +8,7 @@ struct VariableMFOperator{T <: Number} <: Operator
     mass_flows::Vector{T}
 end
 
-function BoreholeNetworksSimulator.operate(operator::VariableMFOperator, step, options, X)
+function BoreholeNetworksSimulatorFork.operate(operator::VariableMFOperator, step, options, X)
     operator.mass_flows .= operator.mass_flow_series[step]
     BoreholeOperation(network = options.configurations[1], mass_flows = operator.mass_flows)
 end

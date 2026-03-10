@@ -6,7 +6,7 @@ using DSP,Statistics
 
 using BoreholeResponseFunctions
 
-using BoreholeNetworksSimulator
+using BoreholeNetworksSimulatorFork
 
 
 include("model_builder.jl")

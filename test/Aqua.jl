@@ -1,2 +1,2 @@
 using Aqua
-Aqua.test_all(BoreholeNetworksSimulator)
+Aqua.test_all(BoreholeNetworksSimulatorFork)

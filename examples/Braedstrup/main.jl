@@ -60,7 +60,7 @@ options = SimulationOptions(
     seasonal_configuration
 end
 
-function BoreholeNetworksSimulator.operate(operator::SeasonalOperator, i, options, X)
+function BoreholeNetworksSimulatorFork.operate(operator::SeasonalOperator, i, options, X)
     active_network = options.configurations[operator.seasonal_configuration[i]]
     BoreholeOperation(network=active_network, mass_flows=operator.mass_flows)
 end

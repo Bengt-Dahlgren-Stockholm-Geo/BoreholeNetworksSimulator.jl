@@ -1,11 +1,11 @@
-using BoreholeNetworksSimulator, Test
+using BoreholeNetworksSimulatorFork, Test
 using Parameters, DataStructures
 
 include("Aqua.jl")
 
 include("utils.jl")
 
-interface_mocks = BoreholeNetworksSimulator.get_all_julia_files_in_dir("mocks/interfaces/")
+interface_mocks = BoreholeNetworksSimulatorFork.get_all_julia_files_in_dir("mocks/interfaces/")
 include.(interface_mocks)
 include("mocks/buffer.jl")
 

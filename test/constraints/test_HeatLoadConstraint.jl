@@ -1,4 +1,4 @@
-import BoreholeNetworksSimulator: constraints_coeffs!, constraints_b!
+import BoreholeNetworksSimulatorFork: constraints_coeffs!, constraints_b!
 
 @testset "test_HeatLoadConstraint_M_parallel" begin
     Nbr = 3

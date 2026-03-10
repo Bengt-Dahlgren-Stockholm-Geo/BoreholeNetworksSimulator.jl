@@ -51,7 +51,7 @@ gfunc = gt.gfunction.gFunction(
 
 
 # -------------------------------------------------------------------------
-# BoreholeNetworksSimulator version
+# BoreholeNetworksSimulatorFork version
 # -------------------------------------------------------------------------
 
 import sys, os

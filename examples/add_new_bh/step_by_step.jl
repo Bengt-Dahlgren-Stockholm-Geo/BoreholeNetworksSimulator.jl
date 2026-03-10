@@ -98,7 +98,7 @@ end
 
 update(operator::StepOperator, Tin) = operator.Tin = Tin
 
-function BoreholeNetworksSimulator.operate(op::StepOperator, step, options, X)
+function BoreholeNetworksSimulatorFork.operate(op::StepOperator, step, options, X)
     @unpack mass_flows, activation_step, mass_flow_containers = op
     after_step = step >= activation_step
     active_configuration = after_step ? 2 : 1

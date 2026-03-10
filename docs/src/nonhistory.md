@@ -15,7 +15,7 @@ with both the convolution and the non-history time superposition methods.
 Let us define an example, very similar to [Basic tutorial](@ref)
 
 ````@example nonhistory
-using BoreholeNetworksSimulator
+using BoreholeNetworksSimulatorFork
 ````
 
 ````@example nonhistory
@@ -26,7 +26,7 @@ medium = GroundMedium(α=1e-6, λ=3., T0=10.)
 borehole = SingleUPipeBorehole(H=100., D=10.)
 positions = [(0., 0.), (0., 5.)]
 borefield = EqualBoreholesBorefield(borehole_prototype=borehole, positions=positions)
-constraint = constant_HeatLoadConstraint(5 .* ones(BoreholeNetworksSimulator.n_boreholes(borefield)), Nt)
+constraint = constant_HeatLoadConstraint(5 .* ones(BoreholeNetworksSimulatorFork.n_boreholes(borefield)), Nt)
 fluid = Water()
 
 network = all_parallel_network(2)

@@ -53,7 +53,7 @@ Finally we can display the heatmap of the temperature field in the borehole regi
 
 
 ## Running the code in Python
-The example is also avaiable from Python. For details of how this is done refer to [Running BoreholeNetworksSimulator from Python](@ref). 
+The example is also avaiable from Python. For details of how this is done refer to [Running BoreholeNetworksSimulatorFork from Python](@ref). 
 The Python version is in:
 ```
 examples/Braedstrup/main.py

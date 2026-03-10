@@ -76,12 +76,12 @@ end
     current_step = 0
 end
 
-function BoreholeNetworksSimulator.operate(operator::SeasonalOperator, i, options, X)
+function BoreholeNetworksSimulatorFork.operate(operator::SeasonalOperator, i, options, X)
     active_network = options.configurations[operator.seasonal_configuration[i]]
     BoreholeOperation(network=active_network, mass_flows=operator.mass_flows)
 end
 
-function BoreholeNetworksSimulator.operate(operator::IntermittentSeasonalOperator, i, options, X)
+function BoreholeNetworksSimulatorFork.operate(operator::IntermittentSeasonalOperator, i, options, X)
     @unpack mass_flows, mass_flows_cont, seasonal_configuration, active_steps, inactive_steps, currently_running, current_step = operator
     active_network = options.configurations[seasonal_configuration[i]]
 

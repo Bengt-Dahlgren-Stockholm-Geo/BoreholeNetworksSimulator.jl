@@ -1,4 +1,4 @@
-import BoreholeNetworksSimulator: get_H, get_D, get_rb, uniform_Tb_coeffs
+import BoreholeNetworksSimulatorFork: get_H, get_D, get_rb, uniform_Tb_coeffs
 
 @testset "test_SingleUPipeBorehole" begin
     H = 100.

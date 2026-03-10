@@ -47,7 +47,7 @@ struct VariableMassFlowOperator <: Operator
     mf2
 end
 
-function BoreholeNetworksSimulator.operate(op::VariableMassFlowOperator, step, options, X)
+function BoreholeNetworksSimulatorFork.operate(op::VariableMassFlowOperator, step, options, X)
     mass_flow = floor((step / (24*30)))%2 == 0 ? op.mf1 : op.mf2
     network = options.configurations[1]
     source_valve = absolute_valve(Graphs.outneighbors(network.graph, source(network)), [mass_flow])

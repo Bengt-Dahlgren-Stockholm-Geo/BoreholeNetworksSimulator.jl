@@ -50,7 +50,7 @@ gfunc = gt.gfunction.gFunction(
 
 
 # -------------------------------------------------------------------------
-# BoreholeNetworksSimulator version
+# BoreholeNetworksSimulatorFork version
 # -------------------------------------------------------------------------
 
 import sys, os
@@ -132,7 +132,7 @@ def get_fls(t, D1, D2, H1, H2, sigma, rb, k_s, alpha, dt):
     rtol = 1e-8
     params = jl.FiniteLineSource.Constants(Δt=dt, α=alpha, rb=rb, kg=k_s, b=10.)
     s = jl.FiniteLineSource.SegmentToSegment(D1=D1, D2=D2, H1=H1, H2=H2, σ=sigma)
-    fls = jl.BoreholeNetworksSimulator.response(jl.DirichletBoundaryCondition(), s, params, t, atol=atol, rtol=rtol)
+    fls = jl.BoreholeNetworksSimulatorFork.response(jl.DirichletBoundaryCondition(), s, params, t, atol=atol, rtol=rtol)
     return fls
 
 def get_dist(b1, b2):

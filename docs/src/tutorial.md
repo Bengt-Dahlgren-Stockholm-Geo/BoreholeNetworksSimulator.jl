@@ -15,7 +15,7 @@ We start by specifying the simulation time step and the simulation duration. For
 we will take monthly time steps during 10 years:
 
 ````@example tutorial
-using BoreholeNetworksSimulator
+using BoreholeNetworksSimulatorFork
 
 Δt = 8760*3600/12.
 Nt = 10*12

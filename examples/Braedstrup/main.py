@@ -38,7 +38,7 @@ borehole_positions = jl.Array[jl.Tuple[jl.Float64, jl.Float64]]([(x, y) for (x,y
 borehole = jl.SingleUPipeBorehole(H=50., D=4., λg = 1.5, pipe_position = ((0.03, 0.0), (-0.03, 0.0)))
 borefield = jl.EqualBoreholesBorefield(borehole_prototype=borehole, positions=borehole_positions)
 medium = jl.FlowInPorousMedium(λw = 0.6, λs = 2., Cw = 4.18*1e6, Cs = 1.7*1e6, θ = 0., Φ = 0.2, T0 = 10.)
-constraint = jl.uniform_InletTempConstraint(jl.Array[jl.Float64]([Tf_injection if i%12 in range(1,7) else Tf_extraction for i in range(1, Nt+1)]), jl.BoreholeNetworksSimulator.n_branches(network))
+constraint = jl.uniform_InletTempConstraint(jl.Array[jl.Float64]([Tf_injection if i%12 in range(1,7) else Tf_extraction for i in range(1, Nt+1)]), jl.BoreholeNetworksSimulatorFork.n_branches(network))
 method = jl.ConvolutionMethod()
 fluid = jl.Water()
 
